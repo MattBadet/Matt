@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const low = require('lowdb');
 const fs = require("fs");
 const token = process.env.token
 

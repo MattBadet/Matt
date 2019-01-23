@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const low = require('lowdb');
 const fs = require("fs");
 const token = process.env.token
+const cfg require('./index.json');
 
 const bot = new Discord.Client();
 var userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf-8'));

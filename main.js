@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const low = require('lowdb');
 const fs = require("fs");
+const token = process.env.token
 
 const bot = new Discord.Client();
 var userData = JSON.parse(fs.readFileSync('Storage/userData.json', 'utf-8'));
@@ -12,7 +13,7 @@ bot.on('ready', () => {
     console.log("Bot is working !");
 });
 
-bot.login('NTE5NjA0ODAxMDg0OTgxMjYw.Duhxfg.vzbxdty-RI-HaoCJ7W74e_s5Ty0');
+bot.login(token);
 
 bot.on('message', message => {
     if(message.content === "ping"){
